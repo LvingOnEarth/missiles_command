@@ -55,6 +55,7 @@ def move_missile(missiles):
             missile.clear()
             missile.hideturtle()
 
+
     dead_missiles = [info for info in missiles if info['state'] == 'dead']
     for dead in dead_missiles:
         missiles.remove(dead)
@@ -81,7 +82,7 @@ def check_interceptions():
 
         for enemy_info in enemy_missiles:
             enemy_missile = enemy_info['missile']
-            if enemy_missile.distance(our_missile.xcor(), our_missile.ycor()) < 20:
+            if enemy_missile.distance(our_missile.xcor(), our_missile.ycor()) < our_info['radius'] * 10:
                 enemy_info['state'] = 'dead'
 
 window.onclick(fire_missile)

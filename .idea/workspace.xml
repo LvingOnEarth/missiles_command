@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67526f9c-03e5-4537-b602-2224a3dbb001" name="Default Changelist" comment="" />
+    <list default="true" id="67526f9c-03e5-4537-b602-2224a3dbb001" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="vcs.Mercurial" />
   </component>
   <component name="RunManager">
     <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -95,37 +98,63 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="408" y="87" key="FileChooserDialogImpl" timestamp="1579175320840">
+    <state x="47" y="0" key="CommitChangelistDialog2" timestamp="1579183774127">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="408" y="87" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579175320840" />
-    <state width="680" height="167" key="GridCell.Tab.0.bottom" timestamp="1579177315896">
+    <state x="47" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579183774127" />
+    <state x="408" y="87" key="FileChooserDialogImpl" timestamp="1579182889692">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="680" height="167" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579177315896" />
-    <state width="680" height="167" key="GridCell.Tab.0.center" timestamp="1579177315896">
+    <state x="408" y="87" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579182889692" />
+    <state x="883" y="261" key="Github.ShareDialog" timestamp="1579182487486">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="680" height="167" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579177315896" />
-    <state width="680" height="167" key="GridCell.Tab.0.left" timestamp="1579177315896">
+    <state x="883" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1579182487486" />
+    <state width="643" height="217" key="GridCell.Tab.0.bottom" timestamp="1579183596210">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="680" height="167" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579177315896" />
-    <state width="680" height="167" key="GridCell.Tab.0.right" timestamp="1579177315896">
+    <state width="643" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579183596210" />
+    <state width="643" height="217" key="GridCell.Tab.0.center" timestamp="1579183596209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="680" height="167" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579177315896" />
-    <state x="120" y="15" key="SettingsEditor" timestamp="1579175473981">
+    <state width="643" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579183596209" />
+    <state width="643" height="217" key="GridCell.Tab.0.left" timestamp="1579183596209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="120" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579175473981" />
+    <state width="643" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579183596209" />
+    <state width="643" height="217" key="GridCell.Tab.0.right" timestamp="1579183596210">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="643" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579183596210" />
+    <state width="643" height="217" key="GridCell.Tab.1.bottom" timestamp="1579183596211">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="643" height="217" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579183596211" />
+    <state width="643" height="217" key="GridCell.Tab.1.center" timestamp="1579183596210">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="643" height="217" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1579183596210" />
+    <state width="643" height="217" key="GridCell.Tab.1.left" timestamp="1579183596210">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="643" height="217" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1579183596210" />
+    <state width="643" height="217" key="GridCell.Tab.1.right" timestamp="1579183596210">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="643" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1579183596210" />
+    <state x="235" y="15" key="SettingsEditor" timestamp="1579182760267">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="235" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579182760267" />
     <state x="827" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579175164331">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -134,5 +163,20 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="407" y="82" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1579176725490" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/game.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="hg4idea.settings">
+    <option name="CHECK_INCOMING_OUTGOING" value="true" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
 </project>
