@@ -8,7 +8,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="ADD_SUFFIX_TO_CHERRY_PICKS_OF_PUBLISHED_COMMITS" value="false" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1WTRu1s7lxfHI0enXNb3as8lqqa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -75,30 +77,45 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="408" y="87" key="FileChooserDialogImpl" timestamp="1579171982310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="408" y="87" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579171982310" />
-    <state width="1217" height="174" key="GridCell.Tab.0.bottom" timestamp="1579171863893">
+    <state width="674" height="167" key="GridCell.Tab.0.bottom" timestamp="1579174794782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1217" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579171863893" />
-    <state width="1217" height="174" key="GridCell.Tab.0.center" timestamp="1579171863893">
+    <state width="674" height="167" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579174794782" />
+    <state width="674" height="167" key="GridCell.Tab.0.center" timestamp="1579174794781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1217" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579171863893" />
-    <state width="1217" height="174" key="GridCell.Tab.0.left" timestamp="1579171863893">
+    <state width="674" height="167" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579174794781" />
+    <state width="674" height="167" key="GridCell.Tab.0.left" timestamp="1579174794781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1217" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579171863893" />
-    <state width="1217" height="174" key="GridCell.Tab.0.right" timestamp="1579171863893">
+    <state width="674" height="167" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579174794781" />
+    <state width="674" height="167" key="GridCell.Tab.0.right" timestamp="1579174794781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1217" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579171863893" />
-    <state x="120" y="15" key="SettingsEditor" timestamp="1579171986123">
+    <state width="674" height="167" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579174794781" />
+    <state x="120" y="15" key="SettingsEditor" timestamp="1579174921530">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="120" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579171986123" />
+    <state x="120" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579174921530" />
+    <state x="827" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579174941915">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="827" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1579174941915" />
   </component>
 </project>
