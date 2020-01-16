@@ -10,6 +10,9 @@ window.bgpic(os.path.join(BASE_PATH, 'images', 'background.png'))
 window.screensize(1200, 768)
 window.tracer(n=2)
 
+def test():
+    pass
+
 BASE_X, BASE_Y = 0, -300
 
 ENEMY_COUNT = 5
@@ -113,12 +116,13 @@ def check_impact():
         enemy_missile = enemy_info['missile']
         if enemy_missile.distance(BASE_X, BASE_Y) < enemy_info['radius'] * 10:
             base_health -= 100
+            
 
 while True:
     window.update()
-    check_impact()
     if game_over():
         continue
+    check_impact()
     check_enemy_count()
     check_interceptions()
     move_missile(missiles=our_missiles)
