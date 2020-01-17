@@ -11,10 +11,20 @@ window.screensize(1200, 768)
 window.tracer(n=2)
 
 BASE_X, BASE_Y = 0, -300
+# name_buildings = ['base.gif', 'house_1.gif', 'kremlin_1.gif', 'nuclear_1.gif', 'skyscraper_1.gif']
+# pos_buildings = [[0, -300], [-200, -300], [-400, -300], [200, -300], [400, -300]]
+
+info_buildings = [{'name': ['base.gif'], 'pos': [0, -300], 'health': 2000},
+                  {'name': ['house_1.gif', 'house_2.gif', 'house_3.gif'], 'pos': [-200, -300], 'health': 2000},
+                  {'name': ['kremlin_1.gif', 'kremlin_2.gif', 'kremlin_3.gif'], 'pos': [-400, -300], 'health': 2000},
+                  {'name': ['nuclear_1.gif', 'nuclear_2.gif', 'nuclear_3.gif'], 'pos': [200, -300], 'health': 2000},
+                  {'name': ['skyscraper_1.gif', 'skyscraper_2.gif', 'skyscraper_3.gif'], 'pos': [400, -300], 'health': 2000}]
 
 ENEMY_COUNT = 5
 our_missiles = []
 enemy_missiles = []
+buildings = []
+
 
 class Missile:
     def __init__(self, x, y, color, x2, y2):
@@ -64,6 +74,44 @@ class Missile:
     def y(self):
         return self.pen.ycor()
 
+class Building:
+    def __init__(self, pos, pic, health):
+        self.health = health
+        self.pos = pos
+        self.pic = pic
+
+        self.base = turtle.Turtle()
+        self.base.hideturtle()
+        self.base.speed(0)
+        self.base.penup()
+        self.base.setpos(x=pos[0], y=pos[1])
+        pic_path = os.path.join(BASE_PATH, 'images', self.pic[0])
+        window.register_shape(pic_path)
+        self.base.shape(pic_path)
+
+    def health_state(self):
+        if self.health < 1600 and self.health >= 800:
+            if len(self.pic) == 1:
+                pic_path = os.path.join(BASE_PATH, 'images', self.pic[0])
+            else:
+                pic_path = os.path.join(BASE_PATH, 'images', self.pic[1])
+            window.register_shape(pic_path)
+            self.base.shape(pic_path)
+        elif self.health < 800 and self.health > 0:
+            if len(self.pic) == 1:
+                pic_path = os.path.join(BASE_PATH, 'images', self.pic[0])
+            else:
+                pic_path = os.path.join(BASE_PATH, 'images', self.pic[2])
+            window.register_shape(pic_path)
+            self.base.shape(pic_path)
+
+    def show(self):
+        self.base.showturtle()
+
+    def hide(self):
+        self.base.hideturtle()
+
+
 def fire_missile(x, y):
     info = Missile(color='white', x=BASE_X, y=BASE_Y, x2=x, y2=y)
     our_missiles.append(info)
@@ -71,7 +119,10 @@ def fire_missile(x, y):
 def fire_enemy_missile():
     x_base = random.randint(-500, 500)
     y_base = 300
-    info = Missile(color='red', x=x_base, y=y_base, x2=BASE_X, y2=BASE_Y)
+    random_build_target = random.randint(0, len(buildings) - 1)
+    x_target = buildings[random_build_target].pos[0]
+    y_target = buildings[random_build_target].pos[1]
+    info = Missile(color='red', x=x_base, y=y_base, x2=x_target, y2=y_target)
     enemy_missiles.append(info)
 
 def move_missile(missiles):
@@ -95,21 +146,28 @@ def check_interceptions():
             if enemy_missile.distance(our_missile.x, our_missile.y) < our_missile.radius * 10:
                 enemy_missile.state = 'dead'
 
-base = turtle.Turtle()
-base.hideturtle()
-base.speed(0)
-base.penup()
-base.setpos(x=BASE_X, y=BASE_Y)
-pic_path = os.path.join(BASE_PATH, 'images', 'base.gif')
-window.register_shape(pic_path)
-base.shape(pic_path)
-base.showturtle()
-
-base_health = 2000
+# base = turtle.Turtle()
+# base.hideturtle()
+# base.speed(0)
+# base.penup()
+# base.setpos(x=BASE_X, y=BASE_Y)
+# pic_path = os.path.join(BASE_PATH, 'images', 'base.gif')
+# window.register_shape(pic_path)
+# base.shape(pic_path)
+# base.showturtle()
+#
+# base_health = 2000
 
 
 def game_over():
-    return base_health < 0
+
+    for build in buildings:
+        if build.health <= 0:
+            buildings.remove(build)
+            build.hide()
+
+    if len(buildings) == 0:
+        return True
 
 
 def check_impact():
@@ -118,19 +176,38 @@ def check_impact():
         if enemy_missile.state != 'explode':
             continue
 
-        if enemy_missile.distance(BASE_X, BASE_Y) < enemy_missile.radius * 10:
-            base_health -= 100
+        for build in buildings:
+            if enemy_missile.distance(build.pos[0], build.pos[1]) < enemy_missile.radius * 10:
+                build.health -= 200
 
+def create_building():
+    for info in info_buildings:
+        build = Building(info['pos'], info['name'], info['health'])
+        buildings.append(build)
+
+create_building()
 
 window.onclick(fire_missile)
+
+def build_show():
+    for build in buildings:
+        build.show()
+
+
+def check_building_health():
+    for build in buildings:
+        build.health_state()
+
 
 while True:
     window.update()
     if game_over():
         continue
+    build_show()
     check_impact()
     check_enemy_count()
     check_interceptions()
+    check_building_health()
     move_missile(missiles=our_missiles)
     move_missile(missiles=enemy_missiles)
 
