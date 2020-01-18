@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67526f9c-03e5-4537-b602-2224a3dbb001" name="Default Changelist" comment="">
+    <list default="true" id="67526f9c-03e5-4537-b602-2224a3dbb001" name="Default Changelist" comment="coordinates as @property">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
     </list>
@@ -116,7 +116,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579194628063</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="getting coordinates of rockets (get_x, get_y)">
+      <created>1579195119135</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579195119135</updated>
+    </task>
+    <task id="LOCAL-00007" summary="coordinates as @property">
+      <created>1579195363900</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579195363900</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add buildings with different states and rockets aim on the buildings">
+      <created>1579270774933</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579270774933</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -147,13 +168,16 @@
     <MESSAGE value="add base with picture" />
     <MESSAGE value="add death of base" />
     <MESSAGE value="make class for rockets" />
-    <option name="LAST_COMMIT_MESSAGE" value="make class for rockets" />
+    <MESSAGE value="getting coordinates of rockets (get_x, get_y)" />
+    <MESSAGE value="coordinates as @property" />
+    <MESSAGE value="add buildings with different states and rockets aim on the buildings" />
+    <option name="LAST_COMMIT_MESSAGE" value="add buildings with different states and rockets aim on the buildings" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="652" y="0" key="CommitChangelistDialog2" timestamp="1579194627055">
+    <state x="652" y="0" key="CommitChangelistDialog2" timestamp="1579270774020">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="652" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579194627055" />
+    <state x="652" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579270774020" />
     <state x="98" y="112" key="DiffContextDialog" timestamp="1579186434825">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -166,22 +190,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="883" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1579186317909" />
-    <state width="643" height="169" key="GridCell.Tab.0.bottom" timestamp="1579195038889">
+    <state width="645" height="158" key="GridCell.Tab.0.bottom" timestamp="1579364458620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="643" height="169" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579195038889" />
-    <state width="643" height="169" key="GridCell.Tab.0.center" timestamp="1579195038888">
+    <state width="645" height="158" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579364458620" />
+    <state width="645" height="158" key="GridCell.Tab.0.center" timestamp="1579364458620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="643" height="169" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579195038888" />
-    <state width="643" height="169" key="GridCell.Tab.0.left" timestamp="1579195038888">
+    <state width="645" height="158" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579364458620" />
+    <state width="645" height="158" key="GridCell.Tab.0.left" timestamp="1579364458620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="643" height="169" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579195038888" />
-    <state width="643" height="169" key="GridCell.Tab.0.right" timestamp="1579195038889">
+    <state width="645" height="158" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579364458620" />
+    <state width="645" height="158" key="GridCell.Tab.0.right" timestamp="1579364458620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="643" height="169" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579195038889" />
+    <state width="645" height="158" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579364458620" />
     <state width="643" height="217" key="GridCell.Tab.1.bottom" timestamp="1579183596211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -206,10 +230,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="235" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579186296892" />
-    <state x="550" y="106" key="Vcs.Push.Dialog.v2" timestamp="1579194633094">
+    <state x="550" y="106" key="Vcs.Push.Dialog.v2" timestamp="1579270776596">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="550" y="106" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579194633094" />
+    <state x="550" y="106" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579270776596" />
     <state x="827" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579186336712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
