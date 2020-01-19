@@ -103,8 +103,16 @@ class Building:
 class Base(Building):
     INITIAL_HEALTH = 3000
 
+    def open_base(self):
+        for missile in our_missiles:
+            if missile.distance(self.pos[0], self.pos[1]) < 50:
+                self.draw('base_opened.gif')
+                break
+        else:
+            self.draw('base.gif')
+
 def fire_missile(x, y):
-    info = Missile(color='white', x=BASE_X, y=BASE_Y, x2=x, y2=y)
+    info = Missile(color='white', x=BASE_X, y=BASE_Y + 15, x2=x, y2=y)
     our_missiles.append(info)
 
 def fire_enemy_missile():
@@ -158,8 +166,10 @@ def check_impact():
                 build.health -= 200
 
 def create_building():
+    # base = Base(info_base)
+
     for info in info_buildings:
-        if info['name'] != 'base.gif':
+        if info['name'][0] != 'base.gif':
             build = Building(info['pos'], info['name'])
         else:
             build = Base(info['pos'], info['name'])
@@ -177,6 +187,7 @@ def check_building_health():
 our_missiles = []
 enemy_missiles = []
 buildings = []
+# info_base = {'name': ['base.gif'], 'pos': [0, -300]}
 info_buildings = [{'name': ['base.gif'], 'pos': [0, -300]},
                   {'name': ['house_1.gif', 'house_2.gif', 'house_3.gif'], 'pos': [-200, -300]},
                   {'name': ['kremlin_1.gif', 'kremlin_2.gif', 'kremlin_3.gif'], 'pos': [-400, -300]},
@@ -187,11 +198,17 @@ create_building()
 
 window.onclick(fire_missile)
 
+
+def base_open():
+    buildings[0].open_base()
+
+
 while True:
     window.update()
     if game_over():
         continue
     build_show()
+    base_open()
     check_impact()
     check_enemy_count()
     check_interceptions()
