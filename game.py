@@ -5,12 +5,11 @@ import os
 BASE_PATH = os.path.dirname(__file__)
 BASE_X, BASE_Y = 0, -300
 ENEMY_COUNT = 5
-
-window = turtle.Screen()
-window.setup(1200 + 3, 700 + 3)
-window.bgpic(os.path.join(BASE_PATH, 'images', 'background.png'))
-window.screensize(1200, 768)
-window.tracer(n=2)
+INFO_BUILDINGS = [{'name': ['base.gif'], 'pos': [0, -300]},
+                      {'name': ['house_1.gif', 'house_2.gif', 'house_3.gif'], 'pos': [-200, -300]},
+                      {'name': ['kremlin_1.gif', 'kremlin_2.gif', 'kremlin_3.gif'], 'pos': [-400, -300]},
+                      {'name': ['nuclear_1.gif', 'nuclear_2.gif', 'nuclear_3.gif'], 'pos': [200, -300]},
+                      {'name': ['skyscraper_1.gif', 'skyscraper_2.gif', 'skyscraper_3.gif'], 'pos': [400, -300]}]
 
 class Missile:
     def __init__(self, x, y, color, x2, y2):
@@ -113,7 +112,7 @@ class Building:
         self.pen.hideturtle()
 
     def is_alive(self):
-        return self.health > 0
+        return self.health >= 0
 
 class Base(Building):
     INITIAL_HEALTH = 4000
@@ -180,7 +179,7 @@ def check_impact():
                 build.health -= 200
 
 def create_building():
-    for info in info_buildings:
+    for info in INFO_BUILDINGS:
         if info['name'][0] != 'base.gif':
             build = Building(info['pos'], info['name'])
         else:
@@ -196,41 +195,52 @@ def check_building_health():
     for build in buildings:
         build.health_state()
 
-our_missiles = []
-enemy_missiles = []
-buildings = []
-# info_base = {'name': ['base.gif'], 'pos': [0, -300]}
-info_buildings = [{'name': ['base.gif'], 'pos': [0, -300]},
-                  {'name': ['house_1.gif', 'house_2.gif', 'house_3.gif'], 'pos': [-200, -300]},
-                  {'name': ['kremlin_1.gif', 'kremlin_2.gif', 'kremlin_3.gif'], 'pos': [-400, -300]},
-                  {'name': ['nuclear_1.gif', 'nuclear_2.gif', 'nuclear_3.gif'], 'pos': [200, -300]},
-                  {'name': ['skyscraper_1.gif', 'skyscraper_2.gif', 'skyscraper_3.gif'], 'pos': [400, -300]}]
-
-create_building()
-
-window.onclick(fire_missile)
-
-
 def base_open():
     buildings[0].open_base()
 
 
+window = turtle.Screen()
+window.setup(1200 + 3, 700 + 3)
+window.screensize(1200, 768)
+
+def game():
+    global our_missiles, enemy_missiles, buildings
+
+    window.clear()
+    window.bgpic(os.path.join(BASE_PATH, 'images', 'background.png'))
+    window.tracer(n=2)
+    window.onclick(fire_missile)
+
+    our_missiles = []
+    enemy_missiles = []
+    buildings = []
+
+    create_building()
+
+    while True:
+        window.update()
+        if game_over():
+            break
+        build_show()
+        base_open()
+        check_impact()
+        check_enemy_count()
+        check_interceptions()
+        check_building_health()
+        move_missile(missiles=our_missiles)
+        move_missile(missiles=enemy_missiles)
+
+    pen = turtle.Turtle(visible=False)
+    pen.speed(0)
+    pen.penup()
+    pen.color('red')
+    pen.write(str('Game over'), align="center", font=["Arial", 20, "bold"])
+
 while True:
-    window.update()
-    if game_over():
-        continue
-    build_show()
-    base_open()
-    check_impact()
-    check_enemy_count()
-    check_interceptions()
-    check_building_health()
-    move_missile(missiles=our_missiles)
-    move_missile(missiles=enemy_missiles)
-
-
-
-
+    game()
+    answer = window.textinput(title='Привет!', prompt='Хотите сыграть еще? д/н')
+    if answer.lower() not in ('д', 'да', 'y', 'yes'):
+        break
 
 
 
