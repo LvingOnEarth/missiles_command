@@ -1,4 +1,5 @@
 import random
+import time
 import turtle
 import os
 
@@ -229,6 +230,7 @@ def game():
         check_building_health()
         move_missile(missiles=our_missiles)
         move_missile(missiles=enemy_missiles)
+        time.sleep(.01)
 
     pen = turtle.Turtle(visible=False)
     pen.speed(0)

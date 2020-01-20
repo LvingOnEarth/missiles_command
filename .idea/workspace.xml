@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67526f9c-03e5-4537-b602-2224a3dbb001" name="Default Changelist" comment="coordinates as @property">
+    <list default="true" id="67526f9c-03e5-4537-b602-2224a3dbb001" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
     </list>
@@ -137,7 +137,42 @@
       <option name="project" value="LOCAL" />
       <updated>1579270774933</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add INITIAL_HEALTH; change health_state in Building; add class Base">
+      <created>1579364562729</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579364562729</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add animation of base">
+      <created>1579450380587</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579450380587</updated>
+    </task>
+    <task id="LOCAL-00011" summary="correct animation of buildings">
+      <created>1579536168325</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579536168325</updated>
+    </task>
+    <task id="LOCAL-00012" summary="show health under building">
+      <created>1579538051085</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579538051085</updated>
+    </task>
+    <task id="LOCAL-00013" summary="endless play">
+      <created>1579539875061</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1579539875061</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -171,13 +206,18 @@
     <MESSAGE value="getting coordinates of rockets (get_x, get_y)" />
     <MESSAGE value="coordinates as @property" />
     <MESSAGE value="add buildings with different states and rockets aim on the buildings" />
-    <option name="LAST_COMMIT_MESSAGE" value="add buildings with different states and rockets aim on the buildings" />
+    <MESSAGE value="add INITIAL_HEALTH; change health_state in Building; add class Base" />
+    <MESSAGE value="add animation of base" />
+    <MESSAGE value="correct animation of buildings" />
+    <MESSAGE value="show health under building" />
+    <MESSAGE value="endless play" />
+    <option name="LAST_COMMIT_MESSAGE" value="endless play" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="652" y="0" key="CommitChangelistDialog2" timestamp="1579270774020">
+    <state x="621" y="1" width="691" height="727" key="CommitChangelistDialog2" timestamp="1579539874375">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="652" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579270774020" />
+    <state x="621" y="1" width="691" height="727" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579539874375" />
     <state x="98" y="112" key="DiffContextDialog" timestamp="1579186434825">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -190,22 +230,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="883" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1579186317909" />
-    <state width="645" height="158" key="GridCell.Tab.0.bottom" timestamp="1579364458620">
+    <state width="586" height="158" key="GridCell.Tab.0.bottom" timestamp="1579540000643">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="645" height="158" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579364458620" />
-    <state width="645" height="158" key="GridCell.Tab.0.center" timestamp="1579364458620">
+    <state width="586" height="158" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579540000643" />
+    <state width="586" height="158" key="GridCell.Tab.0.center" timestamp="1579540000642">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="645" height="158" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579364458620" />
-    <state width="645" height="158" key="GridCell.Tab.0.left" timestamp="1579364458620">
+    <state width="586" height="158" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579540000642" />
+    <state width="586" height="158" key="GridCell.Tab.0.left" timestamp="1579540000642">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="645" height="158" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579364458620" />
-    <state width="645" height="158" key="GridCell.Tab.0.right" timestamp="1579364458620">
+    <state width="586" height="158" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579540000642" />
+    <state width="586" height="158" key="GridCell.Tab.0.right" timestamp="1579540000643">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="645" height="158" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579364458620" />
+    <state width="586" height="158" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579540000643" />
     <state width="643" height="217" key="GridCell.Tab.1.bottom" timestamp="1579183596211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -230,10 +270,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="235" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579186296892" />
-    <state x="550" y="106" key="Vcs.Push.Dialog.v2" timestamp="1579270776596">
+    <state x="550" y="106" key="Vcs.Push.Dialog.v2" timestamp="1579539876376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="550" y="106" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579270776596" />
+    <state x="550" y="106" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579539876376" />
     <state x="827" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579186336712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
