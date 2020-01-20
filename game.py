@@ -77,6 +77,14 @@ class Building:
         window.register_shape(pic_path)
         self.pen.shape(pic_path)
 
+        title = turtle.Turtle(visible=False)
+        title.speed(0)
+        title.penup()
+        title.setpos(x=pos[0], y=pos[1] - 65)
+        title.write(str(self.health), align="center", font=["Arial", 10, "bold"])
+        self.title = title
+        self.title_health = self.health
+
     def health_state(self):
         if self.pic[0] == 'base.gif':
             return
@@ -93,6 +101,10 @@ class Building:
         if self.pen.shape() != pic_path:
             window.register_shape(pic_path)
             self.pen.shape(pic_path)
+        if self.health != self.title_health:
+            self.title_health = self.health
+            self.title.clear()
+            self.title.write(str(self.title_health), align="center", font=["Arial", 10, "bold"])
 
     def show(self):
         self.pen.showturtle()
@@ -104,7 +116,7 @@ class Building:
         return self.health > 0
 
 class Base(Building):
-    INITIAL_HEALTH = 3000
+    INITIAL_HEALTH = 4000
 
     def open_base(self):
         for missile in our_missiles:
@@ -168,8 +180,6 @@ def check_impact():
                 build.health -= 200
 
 def create_building():
-    # base = Base(info_base)
-
     for info in info_buildings:
         if info['name'][0] != 'base.gif':
             build = Building(info['pos'], info['name'])
