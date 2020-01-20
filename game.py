@@ -81,7 +81,7 @@ class Building:
         if self.pic[0] == 'base.gif':
             return
 
-        if self.health < self.INITIAL_HEALTH * 0.3:
+        if self.health < self.INITIAL_HEALTH * 0.2:
             self.draw(self.pic[2])
 
         elif self.health < self.INITIAL_HEALTH * 0.8:
@@ -99,6 +99,9 @@ class Building:
 
     def hide(self):
         self.pen.hideturtle()
+
+    def is_alive(self):
+        return self.health > 0
 
 class Base(Building):
     INITIAL_HEALTH = 3000
@@ -118,11 +121,13 @@ def fire_missile(x, y):
 def fire_enemy_missile():
     x_base = random.randint(-500, 500)
     y_base = 300
-    random_build_target = random.choice(buildings)
-    x_target = random_build_target.pos[0]
-    y_target = random_build_target.pos[1]
-    info = Missile(color='red', x=x_base, y=y_base, x2=x_target, y2=y_target)
-    enemy_missiles.append(info)
+    alive_buildings = [b for b in buildings if b.is_alive()]
+    if alive_buildings:
+        random_build_target = random.choice(alive_buildings)
+        x_target = random_build_target.pos[0]
+        y_target = random_build_target.pos[1]
+        info = Missile(color='red', x=x_base, y=y_base, x2=x_target, y2=y_target)
+        enemy_missiles.append(info)
 
 def move_missile(missiles):
     for missile in missiles:
@@ -147,14 +152,11 @@ def check_interceptions():
 
 
 def game_over():
-    for build in buildings:
-        if build.health <= 0:
-            buildings.remove(build)
-            build.hide()
-
-    if len(buildings) == 0:
+    for b in buildings:
+        if b.is_alive():
+            break
+    else:
         return True
-
 
 def check_impact():
     for enemy_missile in enemy_missiles:
